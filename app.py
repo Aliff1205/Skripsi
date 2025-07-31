@@ -5,12 +5,12 @@ import tensorflow as tf
 from PIL import Image
 import gdown
 import os
+import urllib.request
 
-# --- Unduh model dari Google Drive jika belum ada ---
 MODEL_PATH = "best_model.h5"
 if not os.path.exists(MODEL_PATH):
-    url = "https://drive.google.com/uc?id=1nx03ynTjClMAO6_TwL4zLQXR5BGy11IO"
-    gdown.download(url, MODEL_PATH, fuzzy=True, quiet=False)
+    url = "https://huggingface.co/Aliff1205/Katarak/resolve/main/best_model.h5"
+    urllib.request.urlretrieve(url, MODEL_PATH)
 
 # --- Load model ---
 @st.cache_resource
