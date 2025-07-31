@@ -4,7 +4,7 @@ import tensorflow as tf
 from PIL import Image
 
 # Nama file model di repo
-MODEL_PATH = "best_model_tf15.h5"
+MODEL_PATH = "best_model_fixed.h5"
 
 # Load model sekali saja
 @st.cache_resource
