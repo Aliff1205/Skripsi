@@ -9,9 +9,8 @@ import os
 # --- Unduh model dari Google Drive jika belum ada ---
 MODEL_PATH = "best_model.h5"
 if not os.path.exists(MODEL_PATH):
-    file_id = "1nx03ynTjClMAO6_TwL4zLQXR5BGy11IO"  # ← Ganti kalau file ID berubah
-    url = f"https://drive.google.com/uc?id={file_id}"
-    gdown.download(url, MODEL_PATH, quiet=False)
+    url = "https://drive.google.com/uc?id=1nx03ynTjClMAO6_TwL4zLQXR5BGy11IO"
+    gdown.download(url, MODEL_PATH, fuzzy=True, quiet=False)
 
 # --- Load model ---
 @st.cache_resource
